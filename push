@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ $1 == "--help" ]]; 
+then
+  echo "usage: echo \"42\" | ./opk-cli--dat/push"
+  echo "Make sure to run ./opk-cli--dat/install first to initialize dat." 
+else
+  while read line
+  do
+    echo "{\"d\":\"$line\"}" 
+    echo "{\"d\":\"$line\"}" | dat import -d data -
+  done < /dev/stdin
+fi
