@@ -1,4 +1,4 @@
 #!/bin/bash
 
-npm install dat -g
+npm install dat -g --unsafe-perm
 dat init --no-prompt
